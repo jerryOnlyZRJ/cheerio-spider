@@ -1,7 +1,8 @@
 const express = require('express');
-const app = express();
 const request = require('request');
 const cheerio = require('cheerio')
+
+const app = express();
 
 app.get('/', (req, res) => {
     //request异步读取
@@ -12,4 +13,6 @@ app.get('/', (req, res) => {
     });
 })
 
-app.listen(3000)
+app.listen(3000, () => {
+    console.log('website is starting at port 3000')
+})
